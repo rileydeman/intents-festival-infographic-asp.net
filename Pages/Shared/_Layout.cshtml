@@ -1,25 +1,33 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Intents Festival</title>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/intents_festival_infographic.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] | Intents Festival</title>
+    
+    <link rel="stylesheet" href="~/assets/css/fonts.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/assets/css/style.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <p>Header</p>
-    </header>
-    <div class="container">
+<header>
+    <a href="/" id="header-logo">
+        <img src="~/assets/img/if25-logo.png" alt=""> 
+    </a>
+    
+    <nav>
+        <p>Nav Bar</p>
+    </nav>
+</header>
+
+    <main>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
+    </main>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            <p>&copy; 2023-@DateTime.Now.Year rileydeman</p>
+            <p>&copy; 2023-@DateTime.Now.Year rileydeman // Powered by <a href="https://rileydeman.com" target="_blank">rileydeman</a></p>
         </div>
     </footer>
 

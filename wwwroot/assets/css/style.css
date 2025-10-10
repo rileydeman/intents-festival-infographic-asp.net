@@ -1,0 +1,56 @@
+:root {
+    --white: #FFFFFF;
+    --header-background: #280D7E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: lato;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    width: 75%;
+    padding: 1.5% 2%;
+    
+    position: fixed;
+    top: 1.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background-color: var(--header-background);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    border-radius: 100px;
+    
+    p {
+        color: var(--white);
+    }
+    
+    #header-logo {
+        width: 11.5%;
+        
+        img {
+            width: 100%;
+        }
+    }
+}
+
+main {
+    min-height: 100%;
+}
+
+footer {
+    padding: 1%;
+}
