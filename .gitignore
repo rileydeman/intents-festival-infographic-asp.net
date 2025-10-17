@@ -23,6 +23,7 @@
 
 # IDE environment files/folders
 .idea/
+.vs/
 
 ### Asp_net ###
 # asp_net specific files

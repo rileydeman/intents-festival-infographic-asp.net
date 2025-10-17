@@ -1,36 +1,60 @@
 ﻿<!DOCTYPE html>
 <html lang="en-AU">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] | Intents Festival</title>
+
+@{
+    var routeValues = ViewContext.ActionDescriptor.RouteValues;
     
-    <link rel="stylesheet" href="~/assets/css/fonts.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/assets/css/style.css" asp-append-version="true" />
+    // Menu data
+    var menu = new[] {
+        new { title = "HOME", url = "/", fileUri = "/index" },
+        new { title = "Line-up", url = "/line-up", fileUri = "/line-up" },
+        new { title = "Privacy", url = "/test", fileUri = "/Privacy" },
+    };
+
+    string pageUri = routeValues.ContainsKey("page") ? routeValues["page"] : "/";
+}
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] | Intents Festival</title>
+
+    <link rel="icon" href="https://www.intentsfestival.nl/wp-content/uploads/2021/01/cropped-unnamed-32x32.jpg" sizes="32x32"/>
+    <link rel="icon" href="https://www.intentsfestival.nl/wp-content/uploads/2021/01/cropped-unnamed-192x192.jpg" sizes="192x192"/>
+    <link rel="apple-touch-icon" href="https://www.intentsfestival.nl/wp-content/uploads/2021/01/cropped-unnamed-180x180.jpg"/>
+
+    <link rel="stylesheet" href="~/assets/css/fonts.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/assets/css/style.css" asp-append-version="true"/>
 </head>
 <body>
 <header>
     <a href="/" id="header-logo">
-        <img src="~/assets/img/if25-logo.png" alt=""> 
+        <img src="~/assets/img/if25-logo.png" alt="">
     </a>
     
     <nav>
-        <p>Nav Bar</p>
+        @{
+            foreach (var item in menu) {
+                <a href="@item.url" class="navItem@(pageUri == item.fileUri ? " ni-selected" : "")">
+                    <p>@item.title</p>
+                </a>
+            }
+        }
     </nav>
 </header>
 
-    <main>
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+<main>
+    <main role="main" class="pb-3">
+        @RenderBody()
     </main>
+</main>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            <p>&copy; 2023-@DateTime.Now.Year rileydeman // Powered by <a href="https://rileydeman.com" target="_blank">rileydeman</a></p>
-        </div>
-    </footer>
+<footer class="border-top footer text-muted">
+    <div class="container">
+        <p>&copy; 2023-@DateTime.Now.Year rileydeman // Powered by <a href="https://rileydeman.com" target="_blank">rileydeman</a></p>
+    </div>
+</footer>
 
-    @await RenderSectionAsync("Scripts", required: false)
+@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
