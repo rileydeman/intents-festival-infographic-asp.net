@@ -1,5 +1,7 @@
 :root {
     --white: #FFFFFF;
+    --black: #000316;
+    --purple: #9F1F96;
     --header-background: #280D7E;
 }
 
@@ -10,7 +12,7 @@
 }
 
 p {
-    font-family: lato;
+    font-family: lato, sans-serif;
 }
 
 body {
@@ -45,8 +47,10 @@ header {
     
     nav {
         height: 100%;
+        width: fit-content;
         display: flex;
         align-items: center;
+        justify-content: right;
         
         .navItem {
             border-top: 5px solid transparent;
@@ -54,12 +58,39 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-left: 1%;
-            padding: 0 2%;
+            padding: 0 3%;
+            text-wrap: nowrap;
+            text-decoration: none;
+            margin: 0 1%;
+            
+            p {
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+            
+            &:hover {
+                border-top: 5px solid var(--purple);
+            }
         }
         
         .ni-selected {
-            border-top: 5px solid #FFFFFF;
+            border-top: 5px solid var(--purple);
+        }
+        
+        .navTicketsBtn {
+            border: 3px solid var(--purple);
+            background-color: var(--purple);
+            height: fit-content;
+            padding: 5.75% 10%;
+            margin-left: 2.5%;
+            border-radius: 5px;
+            transition: .5s ease;
+            
+            &:hover {
+                border: 3px solid var(--purple);
+                background-color: transparent;
+                scale: 0.95;
+            }
         }
     }
 }
@@ -69,5 +100,15 @@ main {
 }
 
 footer {
+    background-color: var(--black);
     padding: 1%;
+    
+    p {
+        color: var(--white);
+        
+        a {
+            text-decoration: none;
+            color: var(--purple);
+        }
+    }
 }

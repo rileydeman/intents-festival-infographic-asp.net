@@ -7,8 +7,8 @@
     // Menu data
     var menu = new[] {
         new { title = "HOME", url = "/", fileUri = "/index" },
-        new { title = "Line-up", url = "/line-up", fileUri = "/line-up" },
-        new { title = "Privacy", url = "/test", fileUri = "/Privacy" },
+        new { title = "EDITIONS", url = "/test", fileUri = "/Privacy" },
+        new { title = "LINE-UP", url = "/line-up", fileUri = "/line-up" },
     };
 
     string pageUri = routeValues.ContainsKey("page") ? routeValues["page"] : "/";
@@ -40,6 +40,10 @@
                 </a>
             }
         }
+
+    	<a href="" class="navItem navTicketsBtn">
+			<p>TICKETS</p>
+		</a>
     </nav>
 </header>
 
