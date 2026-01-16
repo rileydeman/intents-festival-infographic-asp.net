@@ -36,7 +36,7 @@
     <nav>
         @{
             foreach (var item in menu) {
-                <a href="@item.url" class="navItem@(pageUri == item.fileUri ? " ni-selected" : "")">
+                <a href="@item.url" class="navItem">
                     <p>@item.title</p>
                 </a>
             }
