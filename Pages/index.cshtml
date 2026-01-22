@@ -4,18 +4,18 @@
     ViewData["Title"] = "HOME";
 
     var editions = new[] {
-	    new { year = 2026, title = "Rise of Titans", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/7d05c1d9-19f9-4425-81e5-f845f7534621.jpg?w=960&h=520&m=0&f=4" },
-	    new { year = 2025, title = "Capital of Craziness", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/461835b4-3943-49ba-a14c-aa0f16490dd3.jpg?w=960&h=520&m=0&f=4" },
-	    new { year = 2024, title = "Into The Wild", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/0a26f434-4439-42ac-a33a-ef8ff356cc40.jpg?w=960&h=520&m=0&f=4" },
-	    new { year = 2023, title = "Kingdom of Unity", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/31689f66-3c96-4fb7-8750-49020432b5ec.jpg?w=960&h=520&m=0&f=4" },
-	    new { year = 2022, title = "Step Into The Game", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/efca9e3c-171a-4b1d-ba3c-8f7e9aa8d444.jpg?w=960&h=520&m=0&f=4" },
-	    new { year = 2021, title = "Step Into The Game", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/94c77b4c-3038-47e9-ab47-e052135e13d8.jpg?w=960&h=520&m=0&f=4" },
-	    new { year = 2020, title = "The Online Festival", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/5340bdc8-78fb-4228-a4cb-1bc60a67b00b.jpg?w=960&h=520&m=0&f=4" },
-	    new { year = 2019, title = "Calling All Superheroes", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/0eeb8cf6-f307-4357-807a-c2a98935b5f9.jpg?w=960&h=520&m=0&f=4" },
-	    new { year = 2018, title = "The Ultimate Celebration", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/1ffb7673-3b4d-4671-bd24-4ba89861e410.720x267_q85_crop-smart.jpg?w=960&h=520&m=0&f=4" },
-	    new { year = 2017, title = "The Circus of Insanity", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/2a8406fe-64ce-4bb2-b8a4-a5975ec09fa5.720x267_q85_crop-smart.jpg?w=960&h=520&m=0&f=4" },
-	    new { year = 2016, title = "It’s All in the Game", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/bc4ca8e4-b004-4ff8-8937-a8374f9204a0.720x267_q85_crop-smart.jpg?w=960&h=520&m=0&f=4" },
-	    new { year = 2015, title = "The Funfair of Madness", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/f77fd9b8-98dd-4c6f-939f-057ba0fad6f6.720x267_q85_crop-smart.jpg?w=960&h=520&m=0&f=4" },
+	    new { year = 2026, title = "Rise of Titans", url = "https://appic.events/en/event/intents-festival-2026", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/7d05c1d9-19f9-4425-81e5-f845f7534621.jpg?w=960&h=520&m=0&f=4" },
+	    new { year = 2025, title = "Capital of Craziness", url = "https://appic.events/en/event/intents-festival-2025", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/461835b4-3943-49ba-a14c-aa0f16490dd3.jpg?w=960&h=520&m=0&f=4" },
+	    new { year = 2024, title = "Into The Wild", url = "https://appic.events/en/event/intents-festival", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/0a26f434-4439-42ac-a33a-ef8ff356cc40.jpg?w=960&h=520&m=0&f=4" },
+	    new { year = 2023, title = "Kingdom of Unity", url = "https://appic.events/en/event/intents-festival-2023", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/31689f66-3c96-4fb7-8750-49020432b5ec.jpg?w=960&h=520&m=0&f=4" },
+	    new { year = 2022, title = "Step Into The Game", url = "https://appic.events/en/event/intents-festival-2022", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/efca9e3c-171a-4b1d-ba3c-8f7e9aa8d444.jpg?w=960&h=520&m=0&f=4" },
+	    new { year = 2021, title = "Step Into The Game", url = "https://appic.events/en/event/intents-festival-2021", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/94c77b4c-3038-47e9-ab47-e052135e13d8.jpg?w=960&h=520&m=0&f=4" },
+	    new { year = 2020, title = "The Online Festival", url = "https://appic.events/en/event/intents-festival-the-online-festival", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/5340bdc8-78fb-4228-a4cb-1bc60a67b00b.jpg?w=960&h=520&m=0&f=4" },
+	    new { year = 2019, title = "Calling All Superheroes", url = "https://appic.events/en/event/intents-festival-2019", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/0eeb8cf6-f307-4357-807a-c2a98935b5f9.jpg?w=960&h=520&m=0&f=4" },
+	    new { year = 2018, title = "The Ultimate Celebration", url = "https://appic.events/en/event/intents-festival-2018", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/1ffb7673-3b4d-4671-bd24-4ba89861e410.720x267_q85_crop-smart.jpg?w=960&h=520&m=0&f=4" },
+	    new { year = 2017, title = "The Circus of Insanity", url = "https://appic.events/en/event/intents-festival-2017", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/2a8406fe-64ce-4bb2-b8a4-a5975ec09fa5.720x267_q85_crop-smart.jpg?w=960&h=520&m=0&f=4" },
+	    new { year = 2016, title = "It’s All in the Game", url = "https://appic.events/en/event/intents-festival-2016", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/bc4ca8e4-b004-4ff8-8937-a8374f9204a0.720x267_q85_crop-smart.jpg?w=960&h=520&m=0&f=4" },
+	    new { year = 2015, title = "The Funfair of Madness", url = "https://appic.events/en/event/intents-festival-2015", img = "https://d2z8xu2rq8njn7.cloudfront.net/media/app-images/original/f77fd9b8-98dd-4c6f-939f-057ba0fad6f6.720x267_q85_crop-smart.jpg?w=960&h=520&m=0&f=4" },
     };
 }
 
@@ -39,15 +39,19 @@
 		<div id="er-inner">
 			@{
 				foreach (var edition in editions) {
-					<article class="er-item">
+					<a href="@edition.url" target="_blank" class="er-item">
 						<div class="ert-cover">
 							<img src="@edition.img" alt="">
-							<div class="ertc-content"></div>
+							<div class="ertc-content">
+								<div class="year-badge">
+									<p>@edition.year</p>
+								</div>
+								<h3>@edition.title</h3>
+							</div>
 						</div>
-					</article>
+					</a>
 				}
 			}
 		</div>
-		
 	</div>
 </section>

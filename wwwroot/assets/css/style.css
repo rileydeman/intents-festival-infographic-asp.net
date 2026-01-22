@@ -19,6 +19,12 @@ h2 {
     margin: 0 0 .5% .75%;
 }
 
+h3 {
+    font-family: lato;
+    font-weight: 750;
+    font-size: 1.5em;
+}
+
 p {
     font-family: lato, sans-serif;
 }
